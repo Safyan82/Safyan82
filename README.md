@@ -47,7 +47,7 @@ Welcome to my GitHub profile! 🚀 I am a passionate developer specializing in M
 ### Technical Skills Breakdown
 
 #### Frontend Skills
-```html
+
 <svg width="100%" height="40">
   <rect x="10" y="10" width="300" height="20" rx="10" ry="10" fill="#e4e4e4"></rect>
   <rect x="10" y="10" width="285" height="20" rx="10" ry="10" fill="#4caf50"></rect>
