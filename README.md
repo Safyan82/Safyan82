@@ -72,7 +72,11 @@ Welcome to my GitHub profile! 🚀 I am a passionate developer specializing in M
   <text x="50%" y="25" fill="#000" font-size="14" text-anchor="middle" alignment-baseline="middle">Express.js: 85%</text>
 </svg>
 
-📈 Stats & Achievements
-GitHub Stats
 
-Contribution Graph
+## 📈 Stats & Achievements
+
+### GitHub Stats
+![Safyan82's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Safyan82&show_icons=true&hide_title=true&hide=prs&count_private=true)
+
+### Contribution Graph
+![Safyan82's Contribution Graph](https://github-readme-activity-graph.cyclic.app/graph?username=Safyan82&bg_color=FFFFFF&color=0366d6&line=1f78d1&point=000000)
