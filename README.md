@@ -102,4 +102,5 @@ Welcome to my GitHub profile! 🚀 I am a passionate developer specialising in M
 ![Safyan82's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Safyan82&show_icons=true&hide_title=true&hide=prs&count_private=true)
 
 ### Contribution Graph
-![Safyan82's Contribution Graph](https://github-readme-activity-graph.cyclic.app/graph?username=Safyan82&bg_color=FFFFFF&color=0366d6&line=1f78d1&point=000000)
+![GitHub Contributions](https://img.shields.io/github/commits-since/Safyan82/Safyan82/latest?label=commits)
+
