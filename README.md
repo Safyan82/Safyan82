@@ -2,7 +2,7 @@
 
 🌟 **Full Stack Developer** | **MERN Stack Specialist** | **AI & Cloud Enthusiast**
 
-Welcome to my GitHub profile! 🚀 I am a passionate developer specializing in MERN stack development with hands-on experience in cloud technologies like AWS and advanced databases like Redis and MySQL. I thrive on solving complex problems, learning cutting-edge technologies, and delivering impactful solutions.
+Welcome to my GitHub profile! 🚀 I am a passionate developer specialising in MERN stack development with hands-on experience in cloud technologies like AWS and advanced databases like Redis and MySQL. I thrive on solving complex problems, learning cutting-edge technologies, and delivering impactful solutions.
 
 ---
 
@@ -10,7 +10,7 @@ Welcome to my GitHub profile! 🚀 I am a passionate developer specializing in M
 
 - 🏢 Currently working as a **Full Stack Developer**.
 - 🎓 **Master's in Computing**, Staffordshire University, United Kingdom.
-- 🌱 I’m currently learning **AI, Machine Learning, and WebXR**.
+- 🌱 I’m currently learning **Machine learning**.
 - 📬 Reach me at: [msafyan46@gmail.com](mailto:msafyan46@gmail.com) or **WhatsApp**: +44 7904 259391.
 - 💼 Connect on [LinkedIn](https://linkedin.com/in/syamehar46).
 
@@ -24,11 +24,13 @@ Welcome to my GitHub profile! 🚀 I am a passionate developer specializing in M
 ![HTML5](https://img.shields.io/badge/HTML5-95%25-orange?style=for-the-badge)
 ![CSS3](https://img.shields.io/badge/CSS3-90%25-blue?style=for-the-badge)
 ![Material-UI](https://img.shields.io/badge/Material--UI-80%25-purple?style=for-the-badge)
+![AntDesign](https://img.shields.io/badge/AntDesign-100%15-purple?style=for-the-badge)
 
 ### Backend Development
 ![Node.js](https://img.shields.io/badge/Node.js-90%25-brightgreen?style=for-the-badge)
 ![Express.js](https://img.shields.io/badge/Express.js-85%25-lightgrey?style=for-the-badge)
 ![GraphQL](https://img.shields.io/badge/GraphQL-80%25-red?style=for-the-badge)
+![REST-API](https://img.shields.io/badge/RESTAPI-80%25-red?style=for-the-badge)
 
 ### Databases
 ![MySQL](https://img.shields.io/badge/MySQL-85%25-orange?style=for-the-badge)
