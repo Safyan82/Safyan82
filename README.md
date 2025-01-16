@@ -58,3 +58,21 @@ Welcome to my GitHub profile! 🚀 I am a passionate developer specializing in M
   <rect x="10" y="10" width="270" height="20" rx="10" ry="10" fill="#ffeb3b"></rect>
   <text x="50%" y="25" fill="#000" font-size="14" text-anchor="middle" alignment-baseline="middle">JavaScript: 90%</text>
 </svg>
+
+#### Backend Skills
+
+<svg width="100%" height="40">
+  <rect x="10" y="10" width="300" height="20" rx="10" ry="10" fill="#e4e4e4"></rect>
+  <rect x="10" y="10" width="270" height="20" rx="10" ry="10" fill="#4caf50"></rect>
+  <text x="50%" y="25" fill="#000" font-size="14" text-anchor="middle" alignment-baseline="middle">Node.js: 90%</text>
+</svg>
+<svg width="100%" height="40">
+  <rect x="10" y="10" width="300" height="20" rx="10" ry="10" fill="#e4e4e4"></rect>
+  <rect x="10" y="10" width="255" height="20" rx="10" ry="10" fill="#ff5722"></rect>
+  <text x="50%" y="25" fill="#000" font-size="14" text-anchor="middle" alignment-baseline="middle">Express.js: 85%</text>
+</svg>
+
+📈 Stats & Achievements
+GitHub Stats
+
+Contribution Graph
