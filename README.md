@@ -24,7 +24,7 @@ Welcome to my GitHub profile! 🚀 I am a passionate developer specialising in M
 ![HTML5](https://img.shields.io/badge/HTML5-95%25-orange?style=for-the-badge)
 ![CSS3](https://img.shields.io/badge/CSS3-90%25-blue?style=for-the-badge)
 ![Material-UI](https://img.shields.io/badge/Material--UI-80%25-purple?style=for-the-badge)
-![AntDesign](https://img.shields.io/badge/AntDesign-100%15-purple?style=for-the-badge)
+![AntDesign](https://img.shields.io/badge/AntDesign-99%25-blue?style=for-the-badge)
 
 ### Backend Development
 ![Node.js](https://img.shields.io/badge/Node.js-90%25-brightgreen?style=for-the-badge)
