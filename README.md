@@ -12,7 +12,7 @@ Welcome to my GitHub profile! 🚀 I am a passionate developer specialising in M
 - 🎓 **Master's in Computing**, Staffordshire University, United Kingdom.
 - 🌱 I’m currently learning **Machine learning**.
 - 📬 Reach me at: [msafyan46@gmail.com](mailto:msafyan46@gmail.com) or **WhatsApp**: +44 7904 259391.
-- 💼 Connect on [LinkedIn](https://linkedin.com/in/syamehar46).
+- 💼 Connect on [LinkedIn](https://linkedin.com/in/sjmehar46/).
 
 ---
 
