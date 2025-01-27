@@ -2,7 +2,7 @@
 
 🌟 **Full Stack Developer** | **MERN Stack Specialist** | **AI & Cloud Enthusiast**
 
-Welcome to my GitHub profile! 🚀 I am a passionate developer specialising in MERN stack development with hands-on experience in cloud technologies like AWS and advanced databases like Redis and MySQL. I thrive on solving complex problems, learning cutting-edge technologies, and delivering impactful solutions.
+Welcome to my GitHub profile! 🚀 I am a passionate developer specialising in MERN stack development with hands-on experience in cloud technologies like AWS and advanced databases like Redis, Mongo and MySQL. I thrive on solving complex problems, learning cutting-edge technologies, and delivering impactful solutions.
 
 ---
 
