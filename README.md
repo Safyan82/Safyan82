@@ -21,6 +21,7 @@ Real-time systems · GraphQL APIs · MongoDB pipelines · payroll-grade data mod
 ```ts
 const safyan = {
   role:        "Full-Stack Engineer",
+  email:       "msafyan46@gmail.com"
   location:    "🇬🇧 United Kingdom",
   experience:  "6+ years shipping to production",
   education:   "MSc Computing — Staffordshire University",
