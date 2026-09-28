@@ -8,7 +8,7 @@
 Real-time systems · GraphQL APIs · MongoDB pipelines · payroll-grade data modelling
 
 <a href="https://linkedin.com/in/sjmehar46/"><img src="https://img.shields.io/badge/LinkedIn-14B8A6?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:msafyan46@gmail.com"><img src="https://img.shields.io/badge/Email-0F766E?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="mailto:msafyan46@gmail.com" title="msafyan46@gmail.com"><img src="https://img.shields.io/badge/Email-0F766E?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 <a href="https://wfc360.com"><img src="https://img.shields.io/badge/WFC360-115E59?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
 <img src="https://komarev.com/ghpvc/?username=Safyan82&style=for-the-badge&color=14B8A6&label=PROFILE+VIEWS" />
 
