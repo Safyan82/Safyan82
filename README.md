@@ -199,9 +199,6 @@ Knowing **why the runtime behaves the way it does** is better.
 <p align="center">
   <img src="https://img.shields.io/badge/React_Native-0F766E?style=flat-square&logo=react&logoColor=white" />
   <img src="https://img.shields.io/badge/Socket.IO-0F766E?style=flat-square&logo=socketdotio&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenAI-0F766E?style=flat-square&logo=openai&logoColor=white" />
-  <img src="https://img.shields.io/badge/LangChain-0F766E?style=flat-square&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/LangGraph-0F766E?style=flat-square&logo=langchain&logoColor=white" />
   <img src="https://img.shields.io/badge/Puppeteer-0F766E?style=flat-square&logo=puppeteer&logoColor=white" />
   <img src="https://img.shields.io/badge/Stripe-0F766E?style=flat-square&logo=stripe&logoColor=white" />
 </p>
