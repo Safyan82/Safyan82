@@ -75,107 +75,15 @@ const safyan = {
 
 ---
 
-# 🏢 Building WFC360
+# 💼 Experience
 
-**WFC360 is a multi-tenant workforce and security operations platform used by UK security companies.**
-
-I've worked across the stack — from **MongoDB data modelling and GraphQL APIs to React interfaces, mobile apps, real-time infrastructure and production deployments.**
-
-The interesting part isn't the technology itself.
-
-It's making sure the software behaves correctly when **hundreds of guards, sites, shifts and payroll records** are involved.
-
-### 🗓️ Scheduling & workforce rules
-
-Built scheduling workflows where a simple CRUD operation isn't enough.
-
-* Server-side shift validation rather than trusting UI checks
-* Rest-period and daily-hour rule enforcement
-* Employee/site/customer filtering through complex MongoDB aggregations
-* Recurring and anchor-time scheduling
-* Mobile response task scheduling
-* Conflict detection and authoritative re-validation
-
-The goal:
-
-> **The UI can warn. The server must decide.**
-
----
-
-### 💷 Payroll & historical data integrity
-
-Worked on pay-rate modelling where changing today's configuration shouldn't rewrite yesterday's payroll.
-
-* Effective-dated pay rates
-* Employee → site → site group → customer overrides
-* Historic rate preservation
-* Duty-date based calculations
-* Invoice generation
-* Xero / QuickBooks exports
-
-One of the engineering principles I care about:
-
-> **Historical financial data should remain explainable years later.**
-
----
-
-### 🔴 Real-time operations
-
-Built real-time workflows connecting backend events to operational dashboards and mobile devices.
-
-* MongoDB Change Streams
-* Socket.IO
-* Real-time patrol/task updates
-* Mobile operational workflows
-* Web Push notifications
-* Service workers
-* Cross-subdomain authentication
-* Actionable notifications
-
-This led me deep into questions around:
-
-**connections · subscriptions · cache invalidation · stale state · cancellation · event delivery · race conditions**
-
-— the kind of problems that don't show up in a basic CRUD tutorial.
-
----
-
-### 🔑 Key Management System
-
-Built a complete key-management workflow involving:
-
-* GraphQL schema design
-* MongoDB aggregation pipelines
-* Custodian tracking
-* Transaction history
-* Audit workflows
-* Supplier-facing audit emails
-* One-time-use links
-
-Also encountered MongoDB's **16 MB BSON document limit** in production after embedding base64 images.
-
-The fix wasn't “increase the limit.”
-
-It required changing the data architecture.
-
----
-
-### 📄 Performance & infrastructure
-
-Some of the work I'm happiest with has been solving problems that weren't obvious from the UI.
-
-* Reduced generated PDF sizes by **~97%**
-* Puppeteer + Sharp + Ghostscript
-* Concurrency-controlled report generation
-* AWS deployments
-* Nginx
-* SSL
-* PM2
-* CI/CD
-* S3
-* Production debugging
-
-I've learned that performance problems are often **architecture problems wearing a slow-request disguise.**
+| When | Where | What I did |
+|---|---|---|
+| **2024 – now** | **ORM Systems** · Full Stack Engineer | Building **WFC360**, a multi-tenant SaaS used by UK security firms. Cut load times from **11s → 2s**. React, React Native, GraphQL, MongoDB on AWS. |
+| 2023 – 2024 | IntraGuard · Full Stack Engineer | Led a scheduling & compliance platform with SIA licence and Right-to-Work checks. It became the base of ORM's SaaS product line. |
+| 2022 – 2023 | Tkxel · Senior Software Engineer | Core modules for a US franchise-management platform. Stripe 3D Secure and subscriptions. |
+| 2020 – 2022 | Evolve Innovative Solutions · Team Lead | Led a 7-engineer team. Built a Shopify returns platform and a Buy Now, Pay Later product. |
+| 2019 – 2020 | ThinkIoT · MERN Developer | Real-time IoT dashboards and a WebRTC video-conferencing platform. |
 
 ---
 
