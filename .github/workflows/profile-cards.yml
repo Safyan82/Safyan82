@@ -1,0 +1,35 @@
+name: Redraw profile cards
+
+on:
+  schedule:
+    - cron: "17 1 * * *"   # every night, 01:17 UTC
+  workflow_dispatch:         # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]
+    paths: ["scripts/**", ".github/workflows/profile-cards.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: node scripts/generate.mjs
+        env:
+          # A personal token lets the cards count your private-repo work too.
+          # Falls back to the built-in token (public activity only) if not set.
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+      - name: Commit if changed
+        run: |
+          git config user.name "profile-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || git commit -m "chore: redraw profile cards"
+          git push

@@ -1,16 +1,18 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F766E,100:14B8A6&height=140&section=header" width="100%" />
+<img src="./assets/header.svg" width="100%" alt="Muhammad Safyan Jelani — full-stack engineer. Production SaaS by day, my own apps by night." />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=3000&pause=900&color=14B8A6&center=true&vCenter=true&width=900&height=60&lines=Hey%2C+I'm+Safyan+%F0%9F%91%8B;Full-Stack+Engineer+%C2%B7+Production+SaaS;TypeScript+%C2%B7+Node.js+%C2%B7+React+%C2%B7+GraphQL;Building+AI+into+real-world+software+%F0%9F%A4%96" alt="Typing SVG" />
+<a href="https://www.linkedin.com/in/sjmehar46"><img src="./assets/link-linkedin.svg" height="44" alt="LinkedIn" /></a>&nbsp;
+<a href="https://wfc360.com"><img src="./assets/link-wfc360.svg" height="44" alt="WFC360" /></a>&nbsp;
+<a href="https://littlestash.co.uk"><img src="./assets/link-littlestash.svg" height="44" alt="littlestash.co.uk" /></a>&nbsp;
+<a href="https://github.com/Safyan82/prompt-firewall"><img src="./assets/link-prompt-firewall.svg" height="44" alt="prompt-firewall" /></a>&nbsp;
+<a href="mailto:msafyan46@gmail.com"><img src="./assets/link-email.svg" height="44" alt="Email" /></a>
 
-### Full-Stack Engineer building production SaaS from database to UI
+<br/><br/>
 
-**TypeScript · Node.js · React · GraphQL · MongoDB · AWS · React Native**
+<img src="./assets/stats.svg" width="100%" alt="GitHub stats, redrawn nightly" />
 
 I build software where **scheduling rules, payroll data, real-time events and operational workflows have to actually work in production**.
-
-<a href="https://linkedin.com/in/sjmehar46/"><img src="https://img.shields.io/badge/LinkedIn-14B8A6?style=for-the-badge&logo=linkedin&logoColor=white" /></a> <a href="mailto:msafyan46@gmail.com"><img src="https://img.shields.io/badge/Email-0F766E?style=for-the-badge&logo=gmail&logoColor=white" /></a> <a href="https://wfc360.com"><img src="https://img.shields.io/badge/WFC360-115E59?style=for-the-badge&logo=googlechrome&logoColor=white" /></a> <img src="https://komarev.com/ghpvc/?username=Safyan82&style=for-the-badge&color=14B8A6&label=PROFILE+VIEWS" />
 
 </div>
 
@@ -327,17 +329,7 @@ Exploring AI-powered product discovery, matching and recommendation systems usin
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Safyan82&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&hide_title=true&bg_color=0d1117&title_color=14b8a6&icon_color=14b8a6&text_color=c9d1d9" />
-
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Safyan82&layout=compact&hide_border=true&langs_count=8&bg_color=0d1117&title_color=14b8a6&text_color=c9d1d9" />
-
-<br/>
-
-<img src="https://streak-stats.demolab.com?user=Safyan82&hide_border=true&background=0d1117&ring=14b8a6&fire=14b8a6&currStreakLabel=14b8a6&sideNums=c9d1d9&currStreakNum=c9d1d9&sideLabels=5eead4&dates=8b949e&stroke=1f2937" />
-
-<br/>
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Safyan82&bg_color=0d1117&color=5eead4&line=14b8a6&point=ccfbf1&area=true&area_color=14b8a6&hide_border=true" />
+<img src="./assets/activity.svg" width="100%" alt="Contribution activity over the last 26 weeks" />
 
 </div>
 

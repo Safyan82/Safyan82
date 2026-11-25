@@ -1,0 +1,17 @@
+{
+  "name": "safyan82",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "cards": "node scripts/generate.mjs",
+    "preview": "node scripts/generate.mjs --mock"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "opentype.js": "^2.0.0"
+  },
+  "private": true,
+  "type": "module"
+}
