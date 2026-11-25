@@ -331,6 +331,251 @@ function activitySvg(weeks) {
   return svg(W, H, ["display", "mono"], b, `${total} contributions in the last 26 weeks`);
 }
 
+// ─── Content sections (static text, drawn as dark cards) ──────────────────
+// Edit the text here; the cards are redrawn on every run.
+const SECTIONS = {
+  intro: [
+    "I build software where scheduling rules, payroll data, real-time events",
+    "and operational workflows have to actually work in production.",
+  ],
+  whoami: [
+    ["role", `"Full-Stack Engineer"`],
+    ["basedIn", `"United Kingdom"`],
+    ["education", ["MSc Software Engineering — Distinction", "BSc Software Engineering — 3.77/4.00"]],
+    ["mainProject", `"WFC360 — workforce & security operations SaaS"`],
+    ["backend", `["Node.js", "TypeScript", "GraphQL", "Apollo", "Express"]`],
+    ["frontend", `["React", "React Native", "Redux"]`],
+    ["data", `["MongoDB", "PostgreSQL", "MySQL", "Redis"]`],
+    ["infrastructure", `["AWS", "Docker", "Nginx", "Linux", "CI/CD"]`],
+    ["currentlyLearning", `["System Design", "DSA", "Python", "Kafka", "AI Engineering"]`],
+    ["engineeringMindset", { next: `"Solve the deterministic problem first. Use AI where it genuinely adds value."` }],
+  ],
+  experience: [
+    { when: "2024 – now", where: "ORM Systems", role: "Full Stack Engineer", what: "Building WFC360, a multi-tenant SaaS used by UK security firms. Cut load times from 11s to 2s. React, React Native, GraphQL and MongoDB on AWS." },
+    { when: "2023 – 2024", where: "IntraGuard", role: "Full Stack Engineer", what: "Led a scheduling and compliance platform with SIA licence and Right-to-Work checks. It became the base of ORM's SaaS product line." },
+    { when: "2022 – 2023", where: "Tkxel", role: "Senior Software Engineer", what: "Core modules for a US franchise-management platform. Stripe 3D Secure and subscriptions." },
+    { when: "2020 – 2022", where: "Evolve Innovative Solutions", role: "Team Lead", what: "Led a 7-engineer team. Built a Shopify returns platform and a Buy Now, Pay Later product." },
+    { when: "2019 – 2020", where: "ThinkIoT", role: "MERN Developer", what: "Real-time IoT dashboards and a WebRTC video-conferencing platform." },
+  ],
+  ai: {
+    intro: "I'm increasingly interested in AI engineering rather than simply AI API integration — especially AI inside systems where incorrect answers have consequences.",
+    exploring: ["LLM applications", "RAG", "LangChain", "LangGraph", "Vercel AI SDK", "Retrieval strategies", "Tool calling", "Structured outputs", "Evaluation pipelines", "Hallucination detection", "Grounding", "Agentic workflows"],
+    approach: ["Deterministic logic", "Structured data", "Retrieval / tools", "LLM reasoning", "Validation / evaluation", "Human or system action"],
+    quote: "LLMs shouldn't replace deterministic software where deterministic software already works.",
+  },
+  levelling: {
+    intro: "I'm deliberately moving beyond being “the MERN guy”.",
+    columns: [
+      { title: "Systems", note: "design at scale", color: "teal", items: ["System design", "Distributed systems", "Event-driven architecture", "Caching", "Message queues", "Kafka", "PostgreSQL", "Database design", "Scalability"] },
+      { title: "Algorithms", note: "NeetCode 150 · Python", color: "amber", items: ["Arrays & hashing", "Two pointers", "Sliding window", "Stack", "Binary search", "Linked lists", "Trees", "Graphs", "Heaps", "Backtracking", "Dynamic programming"] },
+      { title: "JS / TS internals", note: "going deeper", color: "blue", items: ["V8", "Execution contexts", "Scope & environments", "Closures", "Hoisting", "this", "Prototypes", "Event loop", "Promises", "Async execution", "TypeScript's type system"] },
+    ],
+    quote: ["Knowing a framework is useful.", "Knowing why the runtime behaves the way it does is better."],
+  },
+  stack: [
+    { label: "Languages", color: "teal", items: ["TypeScript", "JavaScript", "Python", "HTML", "CSS"] },
+    { label: "Frontend & mobile", color: "blue", items: ["React", "React Native", "Redux", "Tailwind", "Vite"] },
+    { label: "Backend & APIs", color: "amber", items: ["Node.js", "Express", "GraphQL", "Apollo", "Socket.IO"] },
+    { label: "Data", color: "coral", items: ["MongoDB", "PostgreSQL", "MySQL", "Redis"] },
+    { label: "Cloud & DevOps", color: "teal", items: ["AWS", "Docker", "Nginx", "Linux", "GitHub Actions"] },
+    { label: "Also", color: "blue", items: ["Puppeteer", "Stripe"] },
+  ],
+  building: [
+    { name: "WFC360", status: "live · day job", color: "teal", line: "Workforce & security SaaS", what: "Scheduling · payroll · patrols · compliance · forms · reports · key management · mobile operations" },
+    { name: "VatScan", status: "exploring", color: "amber", line: "VAT receipts, automated", what: "AI-assisted VAT receipt and invoice processing for UK businesses." },
+    { name: "Product intelligence", status: "exploring", color: "blue", line: "Discovery & matching", what: "AI-powered product discovery, matching and recommendations using LLMs + structured data + retrieval." },
+  ],
+  footer: { line: "I like building things that survive contact with production.", cmd: `git commit -m "always shipping"` },
+};
+
+function wrap(str, font, size, maxW) {
+  const words = str.split(" "), lines = [];
+  let cur = "";
+  for (const w of words) {
+    const t = cur ? cur + " " + w : w;
+    if (width(t, font, size) > maxW && cur) { lines.push(cur); cur = w; } else cur = t;
+  }
+  if (cur) lines.push(cur);
+  return lines;
+}
+const ALL_FONTS = ["display", "body", "mono", "monoBold"];
+const BODY = "#c3cad8";
+
+function whoamiSvg() {
+  const W = 960, lh = 25, x = 86;
+  const S = SECTIONS.whoami;
+  const extra = S.reduce((a, [, v]) => a + (Array.isArray(v) ? v.length + 1 : v.next ? 1 : 0), 0);
+  const H = 60 + 26 + SECTIONS.intro.length * lh + 14 + (S.length + 2 + extra) * lh + 36;
+  let b = frame(W, H);
+  b += `<path d="M0.5 14.5a14 14 0 0 1 14-14h931a14 14 0 0 1 14 14V44H0.5z" fill="${C.panel2}"/><line x1="0" y1="44" x2="${W}" y2="44" stroke="${C.border}"/>`;
+  ["#ff5f57", "#febc2e", "#28c840"].forEach((c, i) => (b += `<circle cx="${26 + i * 20}" cy="22" r="6" fill="${c}"/>`));
+  b += text(W / 2 - width("whoami.ts", "mono", 13) / 2, 27, "whoami.ts", "mono", 13, C.sub);
+  let y = 86, n = 1;
+  const ln = () => text(30, y, String(n++).padStart(2, "0"), "mono", 13, C.dim);
+  const span = (t, c) => `<tspan fill="${c}">${esc(t)}</tspan>`;
+  const code = (indent, parts) => `<text x="${x + indent * 9}" y="${y}" font-family="JBMono" font-size="15">${parts}</text>`;
+  for (const l of SECTIONS.intro) { b += ln() + code(0, span("// " + l, C.dim)); y += lh; }
+  y += 14;
+  b += ln() + code(0, span("const ", C.coral) + span("safyan", C.text) + span(" = {", C.sub)); y += lh;
+  const strVal = (v) => {
+    let parts = "";
+    for (const seg of v.replace(/"([^"]*)"/g, "\u0001$1\u0002").split(/(\u0001[^\u0002]*\u0002)/)) {
+      if (!seg) continue;
+      parts += seg.startsWith("\u0001") ? span(`"${seg.slice(1, -1)}"`, C.teal) : span(seg, C.sub);
+    }
+    return parts;
+  };
+  for (const [k, v] of S) {
+    const key = span(k, C.blue) + span(": ", C.sub);
+    if (Array.isArray(v)) {
+      b += ln() + code(2, key + span("[", C.sub)); y += lh;
+      for (const it of v) { b += ln() + code(4, strVal(`"${it}"`) + span(",", C.sub)); y += lh; }
+      b += ln() + code(2, span("],", C.sub)); y += lh;
+    } else if (v.next) {
+      b += ln() + code(2, key); y += lh;
+      b += ln() + code(4, strVal(v.next)); y += lh;
+    } else {
+      b += ln() + code(2, key + strVal(v) + span(",", C.sub)); y += lh;
+    }
+  }
+  b += ln() + code(0, span("};", C.sub));
+  b += `<line x1="62" y1="62" x2="62" y2="${H - 24}" stroke="${C.border}"/>`;
+  return svg(W, H, ["mono"], b, "whoami: " + SECTIONS.intro.join(" "));
+}
+
+function experienceSvg() {
+  const W = 960, cx = 204, cw = W - cx - 32, lh = 23;
+  const items = SECTIONS.experience.map((e) => ({ ...e, lines: wrap(e.what, "body", 16, cw) }));
+  const H = 84 + items.reduce((a, e) => a + 30 + e.lines.length * lh + 22, 0) + 6;
+  let b = frame(W, H) + heading(W, 46, "experience", "6+ years · full stack");
+  let y = 92;
+  const ys = [];
+  items.forEach((e, i) => {
+    const c = i === 0 ? C.teal : C.sub;
+    b += text(32, y, e.when, "mono", 13, c);
+    ys.push(y - 5);
+    b += text(cx, y, e.where, "display", 20, C.text);
+    b += text(cx + width(e.where, "display", 20) + 10, y, "· " + e.role, "body", 16, C.sub);
+    e.lines.forEach((l, j) => (b += text(cx, y + 28 + j * lh, l, "body", 16, BODY)));
+    y += 30 + e.lines.length * lh + 22;
+  });
+  b += `<line x1="176" y1="${ys[0]}" x2="176" y2="${ys.at(-1)}" stroke="${C.border}" stroke-width="2"/>`;
+  ys.forEach((yy, i) => (b += i === 0
+    ? `<circle cx="176" cy="${yy}" r="9" fill="${C.teal}" fill-opacity="0.2"/><circle cx="176" cy="${yy}" r="5" fill="${C.teal}"/>`
+    : `<circle cx="176" cy="${yy}" r="5" fill="${C.bg}" stroke="${C.sub}" stroke-width="2"/>`));
+  return svg(W, H, ALL_FONTS, b, "Experience");
+}
+
+function chips(x0, y0, maxW, items, font, size, color, h = 30, gap = 8) {
+  let x = x0, y = y0, out = "";
+  for (const it of items) {
+    const w = width(it, font, size) + 22;
+    if (x + w > x0 + maxW) { x = x0; y += h + gap; }
+    out += `<rect x="${r1(x)}" y="${y}" width="${r1(w)}" height="${h}" rx="7" fill="${color}" fill-opacity="0.08" stroke="${color}" stroke-opacity="0.35"/>`;
+    out += text(x + 11, y + h / 2 + size * 0.36, it, font, size, color === C.text ? C.text : color);
+    x += w + gap;
+  }
+  return { out, bottom: y + h };
+}
+
+function aiSvg() {
+  const W = 960, A = SECTIONS.ai, lw = 520;
+  let b = "";
+  const intro = wrap(A.intro, "body", 18, lw);
+  let y = 92;
+  intro.forEach((l) => { b += text(32, y, l, "body", 18, C.text); y += 27; });
+  y += 14;
+  b += label(32, y, "currently exploring");
+  const ch = chips(32, y + 14, lw, A.exploring, "mono", 13, C.teal);
+  b += ch.out;
+  let leftBottom = ch.bottom;
+  // pipeline
+  const px = 600, pw = W - 32 - px, bh = 34, gap = 16;
+  b += label(px, 82, "my approach");
+  A.approach.forEach((s, i) => {
+    const by = 96 + i * (bh + gap);
+    const c = i === 0 ? C.teal : i === A.approach.length - 1 ? C.amber : C.border;
+    b += `<rect x="${px}" y="${by}" width="${pw}" height="${bh}" rx="8" fill="${C.panel}" stroke="${c}"/>`;
+    b += text(px + 14, by + 22, String(i + 1).padStart(2, "0"), "mono", 12, C.dim);
+    b += text(px + 46, by + 22, s, "mono", 14, C.text);
+    if (i) b += `<path d="M${px + pw / 2} ${by - gap + 2}v${gap - 6}m-4 -4l4 4 4-4" fill="none" stroke="${C.sub}" stroke-width="1.5"/>`;
+  });
+  const rightBottom = 96 + A.approach.length * (bh + gap) - gap;
+  y = Math.max(leftBottom, rightBottom) + 34;
+  const q = wrap(A.quote, "display", 20, W - 64 - 24);
+  b += `<rect x="32" y="${y}" width="3" height="${q.length * 28 + 6}" rx="1.5" fill="${C.teal}"/>`;
+  q.forEach((l, i) => (b += text(52, y + 22 + i * 28, l, "display", 20, C.text)));
+  const H = y + q.length * 28 + 36;
+  return svg(W, H, ALL_FONTS, frame(W, H) + heading(W, 46, "ai engineering", "beyond API integration") + b, "AI engineering");
+}
+
+function levellingSvg() {
+  const W = 960, L = SECTIONS.levelling, gap = 16, pw = (W - 64 - 2 * gap) / 3, lh = 25;
+  const rows = Math.max(...L.columns.map((c) => c.items.length));
+  const py = 112, ph = 74 + rows * lh;
+  let b = text(32, 88, L.intro, "body", 18, C.text);
+  L.columns.forEach((c, i) => {
+    const x = 32 + i * (pw + gap), col = C[c.color];
+    b += panel(x, py, pw, ph);
+    b += label(x + 20, py + 32, c.title, col, 13);
+    b += text(x + 20, py + 54, c.note, "mono", 12, C.sub);
+    b += `<line x1="${r1(x + 20)}" y1="${py + 66}" x2="${r1(x + pw - 20)}" y2="${py + 66}" stroke="${C.border}"/>`;
+    c.items.forEach((it, j) => {
+      const yy = py + 92 + j * lh;
+      b += text(x + 20, yy, "›", "monoBold", 14, col) + text(x + 38, yy, it, "mono", 14, BODY);
+    });
+  });
+  const qy = py + ph + 40;
+  b += `<rect x="32" y="${qy - 22}" width="3" height="64" rx="1.5" fill="${C.blue}"/>`;
+  b += text(52, qy, L.quote[0], "body", 18, C.sub);
+  b += text(52, qy + 30, L.quote[1], "display", 20, C.text);
+  const H = qy + 66;
+  return svg(W, H, ALL_FONTS, frame(W, H) + heading(W, 46, "what i'm levelling up", "in progress") + b, "What I'm levelling up");
+}
+
+function stackSvg() {
+  const W = 960, lx = 220;
+  let y = 76, b = "";
+  for (const g of SECTIONS.stack) {
+    b += label(32, y + 20, g.label);
+    const ch = chips(lx, y, W - 32 - lx, g.items, "body", 15, C[g.color], 32, 10);
+    b += ch.out;
+    y = ch.bottom + 14;
+    b += `<line x1="32" y1="${y - 7}" x2="${W - 32}" y2="${y - 7}" stroke="${C.border}" stroke-dasharray="2 4"/>`;
+  }
+  const H = y + 18;
+  return svg(W, H, ALL_FONTS, frame(W, H) + heading(W, 46, "stack", "") + b, "Stack: " + SECTIONS.stack.map((g) => g.items.join(", ")).join("; "));
+}
+
+function buildingSvg() {
+  const W = 960, B = SECTIONS.building, gap = 16, pw = (W - 64 - gap * (B.length - 1)) / B.length;
+  const lines = B.map((p) => wrap(p.what, "body", 15, pw - 40));
+  const ph = 118 + Math.max(...lines.map((l) => l.length)) * 22 + 14;
+  let b = "";
+  B.forEach((p, i) => {
+    const x = 32 + i * (pw + gap), y = 72, c = C[p.color];
+    b += panel(x, y, pw, ph);
+    b += `<rect x="${r1(x + 20)}" y="${y + 20}" width="${r1(width(p.status, "mono", 11, 1.2) + 18)}" height="20" rx="10" fill="${c}" fill-opacity="0.12"/>`;
+    b += text(x + 29, y + 34, p.status.toUpperCase(), "mono", 11, c, `letter-spacing="1.2"`);
+    b += text(x + 20, y + 74, p.name, "display", 24, C.text);
+    b += text(x + 20, y + 98, p.line, "mono", 13, C.sub);
+    lines[i].forEach((l, j) => (b += text(x + 20, y + 128 + j * 22, l, "body", 15, BODY)));
+  });
+  const H = 72 + ph + 30;
+  return svg(W, H, ALL_FONTS, frame(W, H) + heading(W, 46, "things i'm building / exploring", "") + b, "Things I'm building");
+}
+
+function footerSvg() {
+  const W = 960, H = 150, F = SECTIONS.footer;
+  let b = frame(W, H);
+  b += `<text x="${W / 2}" y="68" text-anchor="middle" font-family="Grotesk" font-weight="700" font-size="26" fill="${C.text}">${esc(F.line)}</text>`;
+  const cw = width("$ " + F.cmd, "mono", 16);
+  const x = W / 2 - cw / 2;
+  b += text(x, 108, "$", "monoBold", 16, C.teal) + text(x + width("$ ", "mono", 16), 108, F.cmd, "mono", 16, C.sub);
+  b += `<rect class="blink" x="${r1(x + cw + 6)}" y="94" width="9" height="18" fill="${C.teal}"/>`;
+  return svg(W, H, ["display", "mono", "monoBold"], b, F.line, `.blink{animation:b 1.1s steps(1) infinite}@keyframes b{50%{opacity:0}}`);
+}
+
 // ─── Data ─────────────────────────────────────────────────────────────────
 async function gql(query, variables = {}) {
   const res = await fetch("https://api.github.com/graphql", {
@@ -476,5 +721,7 @@ fs.writeFileSync(path.join(OUT, "header.svg"), headerSvg());
 for (const l of CONFIG.links) fs.writeFileSync(path.join(OUT, `link-${l.id}.svg`), linkSvg(l));
 fs.writeFileSync(path.join(OUT, "stats.svg"), statsSvg(stats));
 fs.writeFileSync(path.join(OUT, "activity.svg"), activitySvg(lastWeeks(data.weeks, 26)));
+for (const [name, fn] of Object.entries({ whoami: whoamiSvg, experience: experienceSvg, ai: aiSvg, levelling: levellingSvg, stack: stackSvg, building: buildingSvg, footer: footerSvg }))
+  fs.writeFileSync(path.join(OUT, `${name}.svg`), fn());
 const { weekly, perYear, ...log } = stats;
 console.log("Cards written to assets/", log);
