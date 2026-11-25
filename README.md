@@ -75,7 +75,7 @@ const safyan = {
 
 ---
 
-# 💼 Experience
+# Experience
 
 | When | Where | What I did |
 |---|---|---|
@@ -87,7 +87,7 @@ const safyan = {
 
 ---
 
-# 🤖 AI Engineering
+# AI Engineering
 
 I'm increasingly interested in **AI engineering rather than simply AI API integration**.
 
@@ -128,7 +128,7 @@ Human or system action
 
 ---
 
-# 🧠 What I'm levelling up
+# What I'm levelling up
 
 I'm deliberately moving beyond being “the MERN guy”.
 
@@ -184,7 +184,7 @@ Knowing **why the runtime behaves the way it does** is better.
 
 ---
 
-# 🛠️ Stack
+# Stack
 
 <p align="center">
 <b>Languages</b><br/>
@@ -205,7 +205,7 @@ Knowing **why the runtime behaves the way it does** is better.
 
 ---
 
-# 🚀 Things I'm building / exploring
+# Things I'm building / exploring
 
 ### WFC360
 
@@ -223,7 +223,7 @@ Exploring AI-powered product discovery, matching and recommendation systems usin
 
 ---
 
-# 📈 GitHub
+# GitHub
 
 <div align="center">
 
