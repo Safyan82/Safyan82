@@ -2,11 +2,11 @@
 
 <img src="./assets/header.svg" width="100%" alt="Muhammad Safyan Jelani — full-stack engineer. Production SaaS by day, my own apps by night." />
 
-<a href="https://www.linkedin.com/in/sjmehar46"><img src="./assets/link-linkedin.svg" height="44" alt="LinkedIn" /></a>&nbsp;
-<a href="https://wfc360.com"><img src="./assets/link-wfc360.svg" height="44" alt="WFC360" /></a>&nbsp;
-<a href="https://littlestash.co.uk"><img src="./assets/link-littlestash.svg" height="44" alt="littlestash.co.uk" /></a>&nbsp;
-<a href="https://github.com/Safyan82/prompt-firewall"><img src="./assets/link-prompt-firewall.svg" height="44" alt="prompt-firewall" /></a>&nbsp;
-<a href="mailto:msafyan46@gmail.com"><img src="./assets/link-email.svg" height="44" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/sjmehar46"><img src="./assets/link-linkedin.svg" height="36" alt="LinkedIn" /></a>&nbsp;
+<a href="https://wfc360.com"><img src="./assets/link-wfc360.svg" height="36" alt="WFC360" /></a>&nbsp;
+<a href="https://littlestash.co.uk"><img src="./assets/link-littlestash.svg" height="36" alt="littlestash.co.uk" /></a>&nbsp;
+<a href="https://github.com/Safyan82/prompt-firewall"><img src="./assets/link-prompt-firewall.svg" height="36" alt="prompt-firewall" /></a>&nbsp;
+<a href="mailto:msafyan46@gmail.com"><img src="./assets/link-email.svg" height="36" alt="Email" /></a>
 
 <br/><br/>
 

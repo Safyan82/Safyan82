@@ -24,11 +24,11 @@ const CONFIG = {
   ],
   // Link buttons under the header (file name: assets/link-<id>.svg)
   links: [
-    { id: "linkedin", label: "linkedin", detail: "/in/sjmehar46", color: "blue" },
-    { id: "littlestash", label: "littlestash.co.uk", detail: "my app", color: "coral" },
-    { id: "prompt-firewall", label: "prompt-firewall", detail: "npm", color: "amber" },
-    { id: "wfc360", label: "wfc360.com", detail: "day job", color: "teal" },
-    { id: "email", label: "email", detail: "msafyan46@gmail.com", color: "teal" },
+    { id: "linkedin", label: "linkedin", color: "blue" },
+    { id: "littlestash", label: "littlestash.co.uk", color: "coral" },
+    { id: "prompt-firewall", label: "prompt-firewall", color: "amber" },
+    { id: "wfc360", label: "wfc360.com", color: "teal" },
+    { id: "email", label: "email", color: "teal" },
   ],
   timeZone: "Europe/London",
 };
