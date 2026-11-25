@@ -8,8 +8,6 @@
 <a href="https://github.com/Safyan82/prompt-firewall"><img src="./assets/link-prompt-firewall.svg" height="36" alt="prompt-firewall" /></a>&nbsp;
 <a href="mailto:msafyan46@gmail.com"><img src="./assets/link-email.svg" height="36" alt="Email" /></a>
 
-<br/><br/>
-
 <img src="./assets/stats.svg" width="100%" alt="GitHub stats, redrawn nightly" />
 
 I build software where **scheduling rules, payroll data, real-time events and operational workflows have to actually work in production**.
