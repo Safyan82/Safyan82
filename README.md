@@ -187,18 +187,13 @@ Knowing **why the runtime behaves the way it does** is better.
 # 🛠️ Stack
 
 <p align="center">
-  <b>Languages</b><br/>
-  <img src="https://skillicons.dev/icons?i=ts,js,python,html,css&theme=dark" />
-  <br/><br/>
-
+<b>Languages</b><br/>
+<img src="https://skillicons.dev/icons?i=ts,js,python,html,css&theme=dark" />
+<br/><br/>
 <b>Frontend & Mobile</b><br/> <img src="https://skillicons.dev/icons?i=react,redux,tailwind,vite&theme=dark" /> <br/><br/>
-
 <b>Backend & APIs</b><br/> <img src="https://skillicons.dev/icons?i=nodejs,express,graphql,apollo&theme=dark" /> <br/><br/>
-
 <b>Data</b><br/> <img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql,redis&theme=dark" /> <br/><br/>
-
 <b>Cloud & DevOps</b><br/> <img src="https://skillicons.dev/icons?i=aws,docker,nginx,linux,githubactions&theme=dark" />
-
 </p>
 
 <p align="center">
